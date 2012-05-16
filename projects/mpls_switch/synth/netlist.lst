@@ -1,0 +1,15 @@
+/home/ajith/netfpga/projects/mpls_switch/synth/nf2_top.ngc 1324505001
+/home/ajith/netfpga/projects/mpls_switch/synth/dcmx3y0_2vp50.edn 1320892608
+/home/ajith/netfpga/projects/mpls_switch/synth/blk_mem.ngc 1320892622
+/home/ajith/netfpga/projects/mpls_switch/synth/async_72x512_fifo.ngc 1320892622
+/home/ajith/netfpga/projects/mpls_switch/synth/async_144x256_fifo.ngc 1320892622
+/home/ajith/netfpga/projects/mpls_switch/synth/cdq_tx_fifo_256x72_to_36.ngc 1320892608
+/home/ajith/netfpga/projects/mpls_switch/synth/cdq_rx_fifo_512x36_to_72.ngc 1320892608
+/home/ajith/netfpga/projects/mpls_switch/synth/txfifo_512x72_to_9.ngc 1320892608
+/home/ajith/netfpga/projects/mpls_switch/synth/rxfifo_8kx9_to_72.ngc 1320892608
+/home/ajith/netfpga/projects/mpls_switch/synth/rxlengthfifo_128x13.ngc 1320892608
+/home/ajith/netfpga/projects/mpls_switch/synth/async_fifo_in_144b_out_72b.ngc 1320892608
+/home/ajith/netfpga/projects/mpls_switch/synth/async_fifo_144b.ngc 1320892608
+/home/ajith/netfpga/projects/mpls_switch/synth/pci2net_16x60.ngc 1320892608
+/home/ajith/netfpga/projects/mpls_switch/synth/net2pci_16x32.ngc 1320892608
+OK

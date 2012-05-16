@@ -1,0 +1,1504 @@
+Release 10.1.03 par K.39 (lin64)
+Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+
+nft32::  Wed Dec 21 15:21:18 2011
+
+par -intstyle ise -ol high -w nf2_top.ncd nf2_top_par.ncd 
+
+
+Constraints file: nf2_top.pcf.
+Loading device for application Rf_Device from file '2vp50.nph' in environment /opt/Xilinx/10.1/ISE.
+   "nf2_top" is an NCD, version 3.2, device xc2vp50, package ff1152, speed -7
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.400 Volts. (default - Range: 1.400 to 1.600 Volts)
+
+INFO:Timing:2802 - Read 321 constraints.  If you are experiencing memory or runtime issues it may help to consolidate
+   some of these constraints.  For more details please do a search for "timing:2802" at http://www.xilinx.com/support.
+WARNING:Timing:3223 - Timing constraint PATH "TS01_path" TIG; ignored during timing analysis.
+WARNING:Timing:3223 - Timing constraint PATH "TS02_path" TIG; ignored during timing analysis.
+INFO:Timing:3377 - Intersecting Constraints found and resolved.  For more information see the TSI report.
+
+Device speed data version:  "PRODUCTION 1.94 2008-07-25".
+
+
+
+Device Utilization Summary:
+
+   Number of BUFGMUXs                       11 out of 16     68%
+      Number of LOCed BUFGMUXs              10 out of 11     90%
+
+   Number of DCMs                            8 out of 8     100%
+      Number of LOCed DCMs                   2 out of 8      25%
+
+   Number of External DIFFMs                 5 out of 344     1%
+      Number of LOCed DIFFMs                 5 out of 5     100%
+
+   Number of External DIFFSs                 5 out of 344     1%
+      Number of LOCed DIFFSs                 5 out of 5     100%
+
+   Number of External IOBs                 419 out of 692    60%
+      Number of LOCed IOBs                 419 out of 419   100%
+
+   Number of RAMB16s                       139 out of 232    59%
+   Number of SLICEs                      20460 out of 23616  86%
+      Number of LOCed SLICEs                90 out of 20460   1%
+
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 1 mins 21 secs 
+Finished initial Timing Analysis.  REAL time: 1 mins 22 secs 
+
+Starting Router
+
+INFO:Route - One or more directed routing (DIRT) constraints generated for a specific device have been found. Note that
+   DIRT strings are guaranteed to work only on the same device they were created for. If the DIRT constraints fail,
+   verify that the same connectivity is available in the target device for this implementation. 
+
+# of EXACT MODE DIRECTED ROUTING found:6, SUCCESS:6, FAILED:0
+
+Phase 1: 177727 unrouted;       REAL time: 1 mins 39 secs 
+
+Phase 2: 152916 unrouted;       REAL time: 2 mins 21 secs 
+
+Phase 3: 53182 unrouted;       REAL time: 2 mins 55 secs 
+
+Phase 4: 53182 unrouted; (1180945)      REAL time: 2 mins 56 secs 
+
+Phase 5: 55403 unrouted; (181357)      REAL time: 3 mins 31 secs 
+
+Phase 6: 55582 unrouted; (0)      REAL time: 3 mins 36 secs 
+
+Phase 7: 0 unrouted; (0)      REAL time: 6 mins 
+
+Phase 8: 0 unrouted; (0)      REAL time: 6 mins 26 secs 
+
+Phase 9: 0 unrouted; (0)      REAL time: 7 mins 31 secs 
+
+
+Total REAL time to Router completion: 7 mins 44 secs 
+Total CPU time to Router completion: 7 mins 44 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|        core_clk_int |     BUFGMUX1P|Yes   |12360 |  0.521     |  1.550      |
++---------------------+--------------+------+------+------------+-------------+
+|  rx_rgmii_3_clk_int |     BUFGMUX7S|Yes   |  211 |  0.276     |  1.490      |
++---------------------+--------------+------+------+------------+-------------+
+|        cpci_clk_int |     BUFGMUX0S|Yes   |  413 |  0.509     |  1.551      |
++---------------------+--------------+------+------+------------+-------------+
+|         clk_ddr_200 |     BUFGMUX3S|Yes   | 1075 |  0.554     |  1.633      |
++---------------------+--------------+------+------+------------+-------------+
+|  rx_rgmii_0_clk_int |     BUFGMUX4S|Yes   |  212 |  0.326     |  1.534      |
++---------------------+--------------+------+------+------------+-------------+
+|  rx_rgmii_1_clk_int |     BUFGMUX6S|Yes   |  240 |  0.121     |  1.532      |
++---------------------+--------------+------+------+------------+-------------+
+|  rx_rgmii_2_clk_int |     BUFGMUX5S|Yes   |  212 |  0.319     |  1.549      |
++---------------------+--------------+------+------+------------+-------------+
+|    tx_rgmii_clk_int |     BUFGMUX2S|Yes   |  571 |  0.465     |  1.548      |
++---------------------+--------------+------+------+------------+-------------+
+|       clk90_ddr_200 |     BUFGMUX0P|Yes   |  665 |  0.278     |  1.544      |
++---------------------+--------------+------+------+------------+-------------+
+|mem_interface_top/in |              |      |      |            |             |
+|frastructure_top0/ca |              |      |      |            |             |
+|    l_top0/phShftClk |     BUFGMUX6P| No   |    3 |  0.005     |  1.449      |
++---------------------+--------------+------+------+------------+-------------+
+|  tx_rgmii_clk90_int |     BUFGMUX3P|Yes   |    8 |  0.136     |  1.517      |
++---------------------+--------------+------+------+------------+-------------+
+|mem_interface_top/in |              |      |      |            |             |
+|frastructure_top0/ca |              |      |      |            |             |
+|       l_top0/hexClk |         Local|      |    1 |  0.000     |  0.280      |
++---------------------+--------------+------+------+------------+-------------+
+|nf2_core/user_data_p |              |      |      |            |             |
+|ath/output_port_look |              |      |      |            |             |
+|up/ethernet_parser/m |              |      |      |            |             |
+|plstag1_add_cmp_eq00 |              |      |      |            |             |
+|                  00 |         Local|      |   13 |  0.023     |  1.299      |
++---------------------+--------------+------+------+------------+-------------+
+|mem_interface_top/in |              |      |      |            |             |
+|frastructure_top0/ca |              |      |      |            |             |
+|  l_top0/suPhClkDiv2 |         Local|      |    1 |  0.000     |  0.482      |
++---------------------+--------------+------+------+------------+-------------+
+|mem_interface_top/dd |              |      |      |            |             |
+|r2_top0/data_path0/d |              |      |      |            |             |
+|  qs_delayed_col1(0) |         Local|      |    9 |  0.019     |  0.315      |
++---------------------+--------------+------+------+------------+-------------+
+|mem_interface_top/dd |              |      |      |            |             |
+|r2_top0/data_path0/d |              |      |      |            |             |
+|  qs_delayed_col0(0) |         Local|      |    9 |  0.019     |  0.315      |
++---------------------+--------------+------+------+------------+-------------+
+|mem_interface_top/dd |              |      |      |            |             |
+|r2_top0/data_path0/d |              |      |      |            |             |
+|  qs_delayed_col1(1) |         Local|      |   13 |  0.021     |  0.319      |
++---------------------+--------------+------+------+------------+-------------+
+|mem_interface_top/dd |              |      |      |            |             |
+|r2_top0/data_path0/d |              |      |      |            |             |
+|  qs_delayed_col0(1) |         Local|      |   13 |  0.021     |  0.319      |
++---------------------+--------------+------+------+------------+-------------+
+|mem_interface_top/dd |              |      |      |            |             |
+|r2_top0/data_path0/d |              |      |      |            |             |
+|  qs_delayed_col1(2) |         Local|      |    9 |  0.019     |  0.315      |
++---------------------+--------------+------+------+------------+-------------+
+|mem_interface_top/dd |              |      |      |            |             |
+|r2_top0/data_path0/d |              |      |      |            |             |
+|  qs_delayed_col0(2) |         Local|      |    9 |  0.019     |  0.315      |
++---------------------+--------------+------+------+------------+-------------+
+|mem_interface_top/dd |              |      |      |            |             |
+|r2_top0/data_path0/d |              |      |      |            |             |
+|  qs_delayed_col1(3) |         Local|      |   11 |  0.025     |  0.323      |
++---------------------+--------------+------+------+------------+-------------+
+|mem_interface_top/dd |              |      |      |            |             |
+|r2_top0/data_path0/d |              |      |      |            |             |
+|  qs_delayed_col0(3) |         Local|      |   11 |  0.025     |  0.323      |
++---------------------+--------------+------+------+------------+-------------+
+|nf2_core/user_data_p |              |      |      |            |             |
+|ath/output_port_look |              |      |      |            |             |
+|up/ethernet_parser/n |              |      |      |            |             |
+|       umtag_not0001 |         Local|      |    4 |  0.000     |  0.471      |
++---------------------+--------------+------+------+------------+-------------+
+|nf2_core/user_data_p |              |      |      |            |             |
+|ath/output_port_look |              |      |      |            |             |
+|up/ethernet_parser/e |              |      |      |            |             |
+|  otnotfound_not0001 |         Local|      |    1 |  0.000     |  0.476      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+Timing Score: 0
+
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the constraint does not cover any paths or that it has no
+   requested value.
+Number of Timing Constraints that were not applied: 4
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                |  Check  | Worst Case |  Best Case | Timing |   Timing   
+                                            |         |    Slack   | Achievable | Errors |    Score   
+------------------------------------------------------------------------------------------------------
+  TS_core_clk_int = PERIOD TIMEGRP "core_cl | SETUP   |     0.001ns|     7.999ns|       0|           0
+  k_int" 8 ns HIGH 50%                      | HOLD    |     0.220ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  TIMEGRP "SRAM2_OUT" OFFSET = OUT 4 ns AFT | MAXDELAY|     0.006ns|     3.994ns|       0|           0
+  ER COMP "core_clk"                        |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.008ns|     1.192ns|       0|           0
+  h0/dqs_div_col1(1)" MAXDELAY = 1.2        |         |            |            |        |            
+    ns                                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_mem_interface_top_infrastructure_top0_ | SETUP   |     0.009ns|     4.982ns|       0|           0
+  clk_dcm0_clk0dcm = PERIOD TIMEGRP         | HOLD    |     0.529ns|            |       0|           0
+   "mem_interface_top_infrastructure_top0_c |         |            |            |        |            
+  lk_dcm0_clk0dcm"         TS_ddr_clk_200 H |         |            |            |        |            
+  IGH 50%                                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.012ns|     1.188ns|       0|           0
+  h0/data_read0/fbit_1(17)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_mem_interface_top_infrastructure_top0_ | SETUP   |     0.014ns|     4.972ns|       0|           0
+  clk_dcm0_clk90dcm = PERIOD TIMEGRP        | HOLD    |     0.484ns|            |       0|           0
+    "mem_interface_top_infrastructure_top0_ |         |            |            |        |            
+  clk_dcm0_clk90dcm"         TS_ddr_clk_200 |         |            |            |        |            
+   PHASE 1.25 ns HIGH 50%                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.029ns|     1.171ns|       0|           0
+  h0/data_read0/fbit_1(31)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.030ns|     1.170ns|       0|           0
+  h0/data_read0/fbit_3(16)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_tx_clk_gmii = PERIOD TIMEGRP "tx_clock | SETUP   |     0.038ns|     7.962ns|       0|           0
+  _gmii" 8 ns HIGH 50%                      | HOLD    |     0.466ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  TS_rx_clk = PERIOD TIMEGRP "rx_clock" 8 n | SETUP   |     0.042ns|     7.958ns|       0|           0
+  s HIGH 50%                                | HOLD    |     0.259ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.045ns|     1.155ns|       0|           0
+  h0/data_read0/fbit_2(24)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TIMEGRP "SRAM2_DATA" OFFSET = OUT 4 ns AF | MAXDELAY|     0.046ns|     3.954ns|       0|           0
+  TER COMP "core_clk"                       |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.048ns|     1.152ns|       0|           0
+  h0/data_read0/fbit_0(18)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET         "mem_interface_top/ddr2_top0/ | MAXDELAY|     0.060ns|     1.440ns|       0|           0
+  data_path0/data_read_controller0/rst_dqs_ |         |            |            |        |            
+  div_delayed"         MAXDELAY = 1.5 ns    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.070ns|     1.130ns|       0|           0
+  h0/data_read0/fbit_3(1)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.071ns|     1.129ns|       0|           0
+  h0/data_read0/fbit_3(9)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.079ns|     1.121ns|       0|           0
+  h0/data_read0/fbit_0(25)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TIMEGRP "SRAM1_OUT" OFFSET = OUT 4 ns AFT | MAXDELAY|     0.090ns|     3.910ns|       0|           0
+  ER COMP "core_clk"                        |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.100ns|     1.100ns|       0|           0
+  h0/dqs_div_col1(3)" MAXDELAY = 1.2        |         |            |            |        |            
+    ns                                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TIMEGRP "SRAM1_DATA" OFFSET = OUT 4 ns AF | MAXDELAY|     0.100ns|     3.900ns|       0|           0
+  TER COMP "core_clk"                       |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.116ns|     1.084ns|       0|           0
+  h0/data_read0/fbit_2(18)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.119ns|     1.081ns|       0|           0
+  h0/data_read0/fbit_2(6)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.121ns|     1.079ns|       0|           0
+  h0/data_read0/fbit_2(8)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.124ns|     1.076ns|       0|           0
+  h0/data_read0/fbit_2(19)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.127ns|     1.073ns|       0|           0
+  h0/data_read0/fbit_3(11)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.132ns|     1.068ns|       0|           0
+  h0/data_read0/fbit_2(9)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.133ns|     1.067ns|       0|           0
+  h0/data_read0/fbit_1(20)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.140ns|     1.060ns|       0|           0
+  h0/dqs_div_col1(0)" MAXDELAY = 1.2        |         |            |            |        |            
+    ns                                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.145ns|     1.055ns|       0|           0
+  h0/data_read0/fbit_0(24)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.145ns|     1.055ns|       0|           0
+  h0/data_read0/fbit_3(17)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/infrastructure_top | MAXDELAY|     0.150ns|     0.605ns|       0|           0
+  0/clk_dcm0/clk90d2inv" MAXDELAY =         |         |            |            |        |            
+   0.755 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.152ns|     1.348ns|       0|           0
+  h0/transfer_done_2(0)" MAXDELAY = 1.5     |         |            |            |        |            
+       ns                                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.153ns|     1.347ns|       0|           0
+  h0/transfer_done_1(3)" MAXDELAY = 1.5     |         |            |            |        |            
+       ns                                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.155ns|     1.045ns|       0|           0
+  h0/data_read0/fbit_2(12)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.161ns|     1.039ns|       0|           0
+  h0/data_read0/fbit_2(29)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.164ns|     1.036ns|       0|           0
+  h0/data_read0/fbit_1(16)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.167ns|     1.333ns|       0|           0
+  h0/transfer_done_1(0)" MAXDELAY = 1.5     |         |            |            |        |            
+       ns                                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/infrastructure_top | MAXDELAY|     0.168ns|     0.587ns|       0|           0
+  0/clk_dcm0/clk0d2inv" MAXDELAY =          |         |            |            |        |            
+  0.755 ns                                  |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.177ns|     1.023ns|       0|           0
+  h0/data_read0/fbit_3(3)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.178ns|     1.022ns|       0|           0
+  h0/data_read0/fbit_2(16)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.181ns|     1.019ns|       0|           0
+  h0/data_read0/fbit_2(17)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.186ns|     1.014ns|       0|           0
+  h0/data_read0/fbit_2(26)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.186ns|     1.014ns|       0|           0
+  h0/data_read0/fbit_1(19)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.190ns|     1.010ns|       0|           0
+  h0/data_read0/fbit_0(8)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.194ns|     1.006ns|       0|           0
+  h0/data_read0/fbit_2(10)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/infrastructure_top | MAXDELAY|     0.218ns|     0.482ns|       0|           0
+  0/cal_top0/suPhClkDiv2" MAXDELAY =        |         |            |            |        |            
+    0.7 ns                                  |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.223ns|     0.977ns|       0|           0
+  h0/data_read0/fbit_1(25)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.231ns|     1.269ns|       0|           0
+  h0/transfer_done_1(2)" MAXDELAY = 1.5     |         |            |            |        |            
+       ns                                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/infrastructure_top | MAXDELAY|     0.231ns|     0.369ns|       0|           0
+  0/cal_top0/phClkDiv2" MAXDELAY = 0.6      |         |            |            |        |            
+      ns                                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.233ns|     0.967ns|       0|           0
+  h0/data_read0/fbit_3(8)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.234ns|     0.966ns|       0|           0
+  h0/data_read0/fbit_3(18)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.241ns|     0.959ns|       0|           0
+  h0/data_read0/fbit_3(4)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/infrastructure_top | MAXDELAY|     0.246ns|     0.204ns|       0|           0
+  0/clk_dcm0/clk0dcm" MAXDELAY = 0.45       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.248ns|     1.252ns|       0|           0
+  h0/transfer_done_3(3)" MAXDELAY = 1.5     |         |            |            |        |            
+       ns                                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.259ns|     0.941ns|       0|           0
+  h0/data_read0/fbit_0(22)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.259ns|     0.941ns|       0|           0
+  h0/data_read0/fbit_3(10)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.263ns|     0.937ns|       0|           0
+  h0/data_read0/fbit_1(22)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.264ns|     1.236ns|       0|           0
+  h0/transfer_done_0(1)" MAXDELAY = 1.5     |         |            |            |        |            
+       ns                                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.264ns|     0.936ns|       0|           0
+  h0/data_read0/fbit_2(30)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.266ns|     0.934ns|       0|           0
+  h0/data_read0/fbit_0(17)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.269ns|     0.931ns|       0|           0
+  h0/data_read0/fbit_0(10)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.269ns|     0.931ns|       0|           0
+  h0/data_read0/fbit_0(12)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/infrastructure_top | MAXDELAY|     0.270ns|     0.180ns|       0|           0
+  0/clk_dcm0/clk90dcm" MAXDELAY = 0.45      |         |            |            |        |            
+      ns                                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.271ns|     0.929ns|       0|           0
+  h0/data_read0/fbit_1(29)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/infrastructure_top | MAXDELAY|     0.273ns|     0.327ns|       0|           0
+  0/cal_top0/suClkDiv2" MAXDELAY = 0.6      |         |            |            |        |            
+      ns                                    |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/infrastructure_top | MAXDELAY|     0.273ns|     0.327ns|       0|           0
+  0/cal_top0/clkDiv2" MAXDELAY = 0.6        |         |            |            |        |            
+    ns                                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.277ns|     1.223ns|       0|           0
+  h0/transfer_done_3(2)" MAXDELAY = 1.5     |         |            |            |        |            
+       ns                                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.282ns|     1.218ns|       0|           0
+  h0/transfer_done_3(0)" MAXDELAY = 1.5     |         |            |            |        |            
+       ns                                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.284ns|     0.916ns|       0|           0
+  h0/data_read0/fbit_3(30)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.290ns|     0.910ns|       0|           0
+  h0/dqs_div_col1(2)" MAXDELAY = 1.2        |         |            |            |        |            
+    ns                                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.309ns|     0.891ns|       0|           0
+  h0/data_read0/fbit_2(1)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.317ns|     0.883ns|       0|           0
+  h0/data_read0/fbit_1(11)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.323ns|     0.877ns|       0|           0
+  h0/data_read0/fbit_2(11)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.323ns|     0.877ns|       0|           0
+  h0/data_read0/fbit_0(16)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.325ns|     0.875ns|       0|           0
+  h0/data_read0/fbit_2(3)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.326ns|     0.874ns|       0|           0
+  h0/data_read0/fbit_3(23)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.331ns|     0.869ns|       0|           0
+  h0/dqs_div_col0(3)" MAXDELAY = 1.2        |         |            |            |        |            
+    ns                                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.336ns|     0.864ns|       0|           0
+  h0/data_read0/fbit_3(22)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.343ns|     0.857ns|       0|           0
+  h0/data_read0/fbit_0(6)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.349ns|     1.151ns|       0|           0
+  h0/transfer_done_2(3)" MAXDELAY = 1.5     |         |            |            |        |            
+       ns                                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.351ns|     1.149ns|       0|           0
+  h0/transfer_done_0(2)" MAXDELAY = 1.5     |         |            |            |        |            
+       ns                                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.363ns|     0.837ns|       0|           0
+  h0/data_read0/fbit_1(6)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.368ns|     0.832ns|       0|           0
+  h0/data_read0/fbit_2(25)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.369ns|     0.831ns|       0|           0
+  h0/data_read0/fbit_3(0)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.370ns|     1.130ns|       0|           0
+  h0/transfer_done_0(3)" MAXDELAY = 1.5     |         |            |            |        |            
+       ns                                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.371ns|     0.829ns|       0|           0
+  h0/data_read0/fbit_0(26)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.372ns|     0.828ns|       0|           0
+  h0/data_read0/fbit_1(24)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.377ns|     0.823ns|       0|           0
+  h0/data_read0/fbit_0(11)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.377ns|     0.823ns|       0|           0
+  h0/data_read0/fbit_3(19)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.378ns|     0.822ns|       0|           0
+  h0/data_read0/fbit_0(9)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.380ns|     0.820ns|       0|           0
+  h0/data_read0/fbit_1(18)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.380ns|     0.820ns|       0|           0
+  h0/data_read0/fbit_3(31)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.389ns|     0.811ns|       0|           0
+  h0/data_read0/fbit_0(30)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.393ns|     0.807ns|       0|           0
+  h0/data_read0/fbit_3(24)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.397ns|     0.803ns|       0|           0
+  h0/data_read0/fbit_1(8)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.398ns|     1.102ns|       0|           0
+  h0/transfer_done_2(1)" MAXDELAY = 1.5     |         |            |            |        |            
+       ns                                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.407ns|     0.793ns|       0|           0
+  h0/data_read0/fbit_1(27)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.410ns|     1.090ns|       0|           0
+  h0/transfer_done_3(1)" MAXDELAY = 1.5     |         |            |            |        |            
+       ns                                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.411ns|     0.789ns|       0|           0
+  h0/data_read0/fbit_0(19)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.411ns|     0.789ns|       0|           0
+  h0/data_read0/fbit_1(3)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.411ns|     0.789ns|       0|           0
+  h0/data_read0/fbit_2(20)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.412ns|     1.088ns|       0|           0
+  h0/transfer_done_0(0)" MAXDELAY = 1.5     |         |            |            |        |            
+       ns                                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.417ns|     0.783ns|       0|           0
+  h0/data_read0/fbit_0(21)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.418ns|     0.782ns|       0|           0
+  h0/data_read0/fbit_1(28)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.419ns|     0.781ns|       0|           0
+  h0/data_read0/fbit_1(30)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.422ns|     0.778ns|       0|           0
+  h0/data_read0/fbit_3(15)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.428ns|     0.772ns|       0|           0
+  h0/data_read0/fbit_2(27)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.431ns|     0.769ns|       0|           0
+  h0/data_read0/fbit_1(14)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.436ns|     0.764ns|       0|           0
+  h0/data_read0/fbit_3(14)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.436ns|     0.764ns|       0|           0
+  h0/data_read0/fbit_0(28)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.436ns|     0.764ns|       0|           0
+  h0/data_read0/fbit_3(13)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.440ns|     0.760ns|       0|           0
+  h0/data_read0/fbit_1(26)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.442ns|     0.758ns|       0|           0
+  h0/data_read0/fbit_3(2)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.442ns|     0.758ns|       0|           0
+  h0/data_read0/fbit_1(4)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.443ns|     0.757ns|       0|           0
+  h0/data_read0/fbit_3(12)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.443ns|     0.757ns|       0|           0
+  h0/data_read0/fbit_3(6)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.447ns|     0.753ns|       0|           0
+  h0/data_read0/fbit_0(29)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.450ns|     0.750ns|       0|           0
+  h0/data_read0/fbit_0(3)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.453ns|     0.747ns|       0|           0
+  h0/data_read0/fbit_2(2)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.454ns|     0.746ns|       0|           0
+  h0/data_read0/fbit_2(31)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.454ns|     0.746ns|       0|           0
+  h0/data_read0/fbit_3(29)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.454ns|     0.746ns|       0|           0
+  h0/data_read0/fbit_0(14)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.454ns|     0.746ns|       0|           0
+  h0/data_read0/fbit_0(15)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.454ns|     0.746ns|       0|           0
+  h0/data_read0/fbit_2(14)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.455ns|     0.745ns|       0|           0
+  h0/data_read0/fbit_2(21)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.455ns|     0.745ns|       0|           0
+  h0/data_read0/fbit_1(21)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.455ns|     0.745ns|       0|           0
+  h0/data_read0/fbit_3(27)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.455ns|     0.745ns|       0|           0
+  h0/data_read0/fbit_2(22)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.455ns|     0.745ns|       0|           0
+  h0/data_read0/fbit_2(15)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.456ns|     0.744ns|       0|           0
+  h0/data_read0/fbit_2(23)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.457ns|     0.743ns|       0|           0
+  h0/data_read0/fbit_2(13)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.457ns|     0.743ns|       0|           0
+  h0/data_read0/fbit_0(13)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.457ns|     0.743ns|       0|           0
+  h0/data_read0/fbit_0(7)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.457ns|     0.743ns|       0|           0
+  h0/data_read0/fbit_2(7)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.458ns|     0.742ns|       0|           0
+  h0/data_read0/fbit_3(20)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.458ns|     0.742ns|       0|           0
+  h0/data_read0/fbit_1(23)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.472ns|     0.728ns|       0|           0
+  h0/data_read0/fbit_3(26)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.479ns|     0.721ns|       0|           0
+  h0/data_read0/fbit_1(0)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.485ns|     0.715ns|       0|           0
+  h0/dqs_div_col0(2)" MAXDELAY = 1.2        |         |            |            |        |            
+    ns                                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.490ns|     0.710ns|       0|           0
+  h0/data_read0/fbit_2(0)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.524ns|     0.976ns|       0|           0
+  h0/transfer_done_2(2)" MAXDELAY = 1.5     |         |            |            |        |            
+       ns                                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.546ns|     0.654ns|       0|           0
+  h0/dqs_div_col0(0)" MAXDELAY = 1.2        |         |            |            |        |            
+    ns                                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.603ns|     0.597ns|       0|           0
+  h0/data_read0/fbit_1(2)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.605ns|     0.895ns|       0|           0
+  h0/transfer_done_1(1)" MAXDELAY = 1.5     |         |            |            |        |            
+       ns                                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.612ns|     0.588ns|       0|           0
+  h0/data_read0/fbit_0(5)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.612ns|     0.588ns|       0|           0
+  h0/data_read0/fbit_1(5)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.614ns|     0.586ns|       0|           0
+  h0/data_read0/fbit_0(2)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.615ns|     0.585ns|       0|           0
+  h0/data_read0/fbit_1(1)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.615ns|     0.585ns|       0|           0
+  h0/data_read0/fbit_3(5)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.620ns|     0.580ns|       0|           0
+  h0/data_read0/fbit_1(10)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.623ns|     0.577ns|       0|           0
+  h0/data_read0/fbit_3(25)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.623ns|     0.577ns|       0|           0
+  h0/data_read0/fbit_0(27)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.624ns|     0.576ns|       0|           0
+  h0/data_read0/fbit_0(1)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.626ns|     0.574ns|       0|           0
+  h0/data_read0/fbit_0(0)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.627ns|     0.573ns|       0|           0
+  h0/data_read0/fbit_0(31)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.632ns|     0.568ns|       0|           0
+  h0/data_read0/fbit_1(7)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.632ns|     0.568ns|       0|           0
+  h0/data_read0/fbit_1(13)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.639ns|     0.561ns|       0|           0
+  h0/data_read0/fbit_1(9)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.643ns|     0.557ns|       0|           0
+  h0/data_read0/fbit_3(28)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.643ns|     0.557ns|       0|           0
+  h0/data_read0/fbit_3(21)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.646ns|     0.554ns|       0|           0
+  h0/data_read0/fbit_3(7)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.650ns|     0.550ns|       0|           0
+  h0/data_read0/fbit_2(28)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.650ns|     0.550ns|       0|           0
+  h0/data_read0/fbit_2(4)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.651ns|     0.549ns|       0|           0
+  h0/data_read0/fbit_0(20)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.652ns|     0.548ns|       0|           0
+  h0/data_read0/fbit_2(5)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.656ns|     0.544ns|       0|           0
+  h0/data_read0/fbit_1(15)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.668ns|     0.532ns|       0|           0
+  h0/dqs_div_col0(1)" MAXDELAY = 1.2        |         |            |            |        |            
+    ns                                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.768ns|     2.232ns|       0|           0
+  h0/fifo_21_rd_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.839ns|     0.361ns|       0|           0
+  h0/data_read0/fbit_0(4)" MAXDELAY =       |         |            |            |        |            
+     1.2 ns                                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.839ns|     0.361ns|       0|           0
+  h0/data_read0/fbit_0(23)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.863ns|     0.337ns|       0|           0
+  h0/data_read0/fbit_1(12)" MAXDELAY =      |         |            |            |        |            
+      1.2 ns                                |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.889ns|     2.111ns|       0|           0
+  h0/fifo_21_rd_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_rgmii_falling_to_rising = MAXDELAY FRO | SETUP   |     0.900ns|     2.300ns|       0|           0
+  M TIMEGRP "rgmii_falling" TO TIMEGRP      |         |            |            |        |            
+      "rgmii_rising" 3.2 ns                 |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     0.916ns|     2.084ns|       0|           0
+  h0/fifo_01_wr_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TIMEGRP "CPCI_ADDR" OFFSET = IN 4 ns BEFO | SETUP   |     1.135ns|     2.865ns|       0|           0
+  RE COMP "cpci_clk"                        |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TIMEGRP "CPCI_WR_DATA" OFFSET = IN 4 ns B | SETUP   |     1.147ns|     2.853ns|       0|           0
+  EFORE COMP "cpci_clk"                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TIMEGRP "CPCI_DMA_INOUT" OFFSET = IN 4 ns | SETUP   |     1.233ns|     2.767ns|       0|           0
+   BEFORE COMP "cpci_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TIMEGRP "CPCI_DMA_IN" OFFSET = IN 4 ns BE | SETUP   |     1.272ns|     2.728ns|       0|           0
+  FORE COMP "cpci_clk"                      |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.305ns|     1.695ns|       0|           0
+  h0/fifo_10_rd_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TIMEGRP "CPCI_REQ" OFFSET = IN 4 ns BEFOR | SETUP   |     1.316ns|     2.684ns|       0|           0
+  E COMP "cpci_clk"                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.359ns|     1.641ns|       0|           0
+  h0/fifo_00_rd_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.360ns|     1.640ns|       0|           0
+  h0/fifo_31_wr_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.363ns|     1.637ns|       0|           0
+  h0/fifo_11_rd_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.420ns|     1.580ns|       0|           0
+  h0/fifo_13_rd_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.451ns|     1.549ns|       0|           0
+  h0/fifo_30_rd_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.458ns|     1.542ns|       0|           0
+  h0/fifo_22_wr_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.479ns|     1.521ns|       0|           0
+  h0/fifo_13_rd_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.502ns|     1.498ns|       0|           0
+  h0/fifo_00_rd_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.514ns|     1.486ns|       0|           0
+  h0/fifo_11_rd_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.552ns|     1.448ns|       0|           0
+  h0/fifo_00_rd_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.558ns|     1.442ns|       0|           0
+  h0/fifo_00_rd_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.561ns|     1.439ns|       0|           0
+  h0/fifo_01_wr_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.586ns|     1.414ns|       0|           0
+  h0/fifo_01_rd_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.606ns|     1.394ns|       0|           0
+  h0/fifo_12_wr_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.613ns|     1.387ns|       0|           0
+  h0/fifo_02_rd_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.630ns|     1.370ns|       0|           0
+  h0/fifo_31_rd_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.669ns|     1.331ns|       0|           0
+  h0/fifo_11_wr_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.678ns|     1.322ns|       0|           0
+  h0/fifo_20_rd_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.716ns|     1.284ns|       0|           0
+  h0/fifo_22_rd_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.729ns|     1.271ns|       0|           0
+  h0/fifo_20_wr_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.746ns|     1.254ns|       0|           0
+  h0/fifo_20_rd_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.787ns|     1.213ns|       0|           0
+  h0/fifo_01_rd_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.809ns|     1.191ns|       0|           0
+  h0/fifo_01_rd_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.812ns|     1.188ns|       0|           0
+  h0/fifo_01_rd_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.836ns|     1.164ns|       0|           0
+  h0/fifo_22_wr_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.837ns|     1.163ns|       0|           0
+  h0/fifo_32_wr_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.843ns|     1.157ns|       0|           0
+  h0/fifo_03_rd_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.844ns|     1.156ns|       0|           0
+  h0/fifo_00_wr_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.855ns|     1.145ns|       0|           0
+  h0/fifo_03_wr_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.871ns|     1.129ns|       0|           0
+  h0/fifo_30_wr_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.872ns|     1.128ns|       0|           0
+  h0/fifo_31_rd_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.876ns|     1.124ns|       0|           0
+  h0/fifo_20_rd_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.884ns|     1.116ns|       0|           0
+  h0/fifo_32_wr_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.893ns|     1.107ns|       0|           0
+  h0/fifo_02_rd_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.895ns|     1.105ns|       0|           0
+  h0/fifo_13_wr_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "rgmii_2_rxc_ibuf" MAXDELAY = 2.5 ns  | MAXDELAY|     1.897ns|     0.603ns|       0|           0
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.905ns|     1.095ns|       0|           0
+  h0/fifo_21_wr_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.905ns|     1.095ns|       0|           0
+  h0/fifo_00_wr_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.908ns|     1.092ns|       0|           0
+  h0/fifo_23_wr_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.910ns|     1.090ns|       0|           0
+  h0/fifo_30_rd_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.910ns|     1.090ns|       0|           0
+  h0/fifo_13_rd_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "rgmii_1_rxc_ibuf" MAXDELAY = 2.5 ns  | MAXDELAY|     1.912ns|     0.588ns|       0|           0
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.922ns|     1.078ns|       0|           0
+  h0/fifo_03_wr_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.945ns|     1.055ns|       0|           0
+  h0/fifo_01_wr_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.950ns|     1.050ns|       0|           0
+  h0/fifo_12_wr_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.950ns|     1.050ns|       0|           0
+  h0/fifo_01_wr_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.953ns|     1.047ns|       0|           0
+  h0/fifo_23_rd_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.956ns|     1.044ns|       0|           0
+  h0/fifo_00_wr_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.959ns|     1.041ns|       0|           0
+  h0/fifo_12_wr_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.959ns|     1.041ns|       0|           0
+  h0/fifo_20_wr_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.963ns|     1.037ns|       0|           0
+  h0/fifo_30_rd_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.971ns|     1.029ns|       0|           0
+  h0/fifo_00_wr_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     1.997ns|     1.003ns|       0|           0
+  h0/fifo_31_rd_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.000ns|     1.000ns|       0|           0
+  h0/fifo_11_rd_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.001ns|     0.999ns|       0|           0
+  h0/fifo_02_rd_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.003ns|     0.997ns|       0|           0
+  h0/fifo_31_wr_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.004ns|     0.996ns|       0|           0
+  h0/fifo_03_rd_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.005ns|     0.995ns|       0|           0
+  h0/fifo_03_wr_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.007ns|     0.993ns|       0|           0
+  h0/fifo_20_rd_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.019ns|     0.981ns|       0|           0
+  h0/fifo_12_rd_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.020ns|     0.980ns|       0|           0
+  h0/fifo_12_rd_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.030ns|     0.970ns|       0|           0
+  h0/fifo_11_wr_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "rgmii_3_rxc_ibuf" MAXDELAY = 2.5 ns  | MAXDELAY|     2.034ns|     0.466ns|       0|           0
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.038ns|     0.962ns|       0|           0
+  h0/fifo_20_wr_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.047ns|     0.953ns|       0|           0
+  h0/fifo_10_rd_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "rgmii_0_rxc_ibuf" MAXDELAY = 2.5 ns  | MAXDELAY|     2.048ns|     0.452ns|       0|           0
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.048ns|     0.952ns|       0|           0
+  h0/fifo_32_rd_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.066ns|     0.934ns|       0|           0
+  h0/fifo_30_wr_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.067ns|     0.933ns|       0|           0
+  h0/fifo_33_wr_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.071ns|     0.929ns|       0|           0
+  h0/fifo_32_wr_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.076ns|     0.924ns|       0|           0
+  h0/fifo_21_rd_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.084ns|     0.916ns|       0|           0
+  h0/fifo_10_wr_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.085ns|     0.915ns|       0|           0
+  h0/fifo_31_wr_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.086ns|     0.914ns|       0|           0
+  h0/fifo_02_rd_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.089ns|     0.911ns|       0|           0
+  h0/fifo_33_rd_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.092ns|     0.908ns|       0|           0
+  h0/fifo_33_rd_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.093ns|     0.907ns|       0|           0
+  h0/fifo_30_wr_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.111ns|     0.889ns|       0|           0
+  h0/fifo_22_rd_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.113ns|     0.887ns|       0|           0
+  h0/fifo_03_wr_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.114ns|     0.886ns|       0|           0
+  h0/fifo_22_wr_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.119ns|     0.881ns|       0|           0
+  h0/fifo_22_wr_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.132ns|     0.868ns|       0|           0
+  h0/fifo_10_wr_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.139ns|     0.861ns|       0|           0
+  h0/fifo_33_rd_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.140ns|     0.860ns|       0|           0
+  h0/fifo_13_wr_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.141ns|     0.859ns|       0|           0
+  h0/fifo_23_wr_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.145ns|     0.855ns|       0|           0
+  h0/fifo_10_wr_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.154ns|     0.846ns|       0|           0
+  h0/fifo_32_wr_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.163ns|     0.837ns|       0|           0
+  h0/fifo_10_wr_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.167ns|     0.833ns|       0|           0
+  h0/fifo_32_rd_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.169ns|     0.831ns|       0|           0
+  h0/fifo_11_wr_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.176ns|     0.824ns|       0|           0
+  h0/fifo_10_rd_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.204ns|     0.796ns|       0|           0
+  h0/fifo_33_wr_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.204ns|     0.796ns|       0|           0
+  h0/fifo_11_wr_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.206ns|     0.794ns|       0|           0
+  h0/fifo_23_wr_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.219ns|     0.781ns|       0|           0
+  h0/fifo_11_rd_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.235ns|     0.765ns|       0|           0
+  h0/fifo_21_wr_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.237ns|     0.763ns|       0|           0
+  h0/fifo_21_rd_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.241ns|     0.759ns|       0|           0
+  h0/fifo_10_rd_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.246ns|     0.754ns|       0|           0
+  h0/fifo_22_rd_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.250ns|     0.750ns|       0|           0
+  h0/fifo_12_rd_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.258ns|     0.742ns|       0|           0
+  h0/fifo_33_rd_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.260ns|     0.740ns|       0|           0
+  h0/fifo_20_wr_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TIMEGRP "SRAM2_DATA" OFFSET = IN 4 ns BEF | SETUP   |     2.262ns|     1.738ns|       0|           0
+  ORE COMP "core_clk"                       |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.264ns|     0.736ns|       0|           0
+  h0/fifo_03_rd_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TIMEGRP "SRAM1_DATA" OFFSET = IN 4 ns BEF | SETUP   |     2.265ns|     1.735ns|       0|           0
+  ORE COMP "core_clk"                       |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.272ns|     0.728ns|       0|           0
+  h0/fifo_23_rd_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.283ns|     0.717ns|       0|           0
+  h0/fifo_30_rd_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.290ns|     0.710ns|       0|           0
+  h0/fifo_30_wr_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.291ns|     0.709ns|       0|           0
+  h0/fifo_13_rd_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.292ns|     0.708ns|       0|           0
+  h0/fifo_03_rd_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.293ns|     0.707ns|       0|           0
+  h0/fifo_21_wr_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.300ns|     0.700ns|       0|           0
+  h0/fifo_12_rd_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.303ns|     0.697ns|       0|           0
+  h0/fifo_33_wr_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TIMEGRP "CPCI_DMA_INOUT" OFFSET = OUT 7 n | MAXDELAY|     2.311ns|     4.689ns|       0|           0
+  s AFTER COMP "cpci_clk"                   |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.320ns|     0.680ns|       0|           0
+  h0/fifo_33_wr_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.322ns|     0.678ns|       0|           0
+  h0/fifo_12_wr_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.322ns|     0.678ns|       0|           0
+  h0/fifo_32_rd_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.325ns|     0.675ns|       0|           0
+  h0/fifo_23_rd_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.336ns|     0.664ns|       0|           0
+  h0/fifo_02_wr_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.337ns|     0.663ns|       0|           0
+  h0/fifo_31_rd_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.367ns|     0.633ns|       0|           0
+  h0/fifo_22_rd_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.372ns|     0.628ns|       0|           0
+  h0/fifo_02_wr_addr(0)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.393ns|     0.607ns|       0|           0
+  h0/fifo_23_wr_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.413ns|     0.587ns|       0|           0
+  h0/fifo_02_wr_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.429ns|     0.571ns|       0|           0
+  h0/fifo_23_rd_addr(1)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.450ns|     0.550ns|       0|           0
+  h0/fifo_32_rd_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.459ns|     0.541ns|       0|           0
+  h0/fifo_21_wr_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.460ns|     0.540ns|       0|           0
+  h0/fifo_31_wr_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.470ns|     0.530ns|       0|           0
+  h0/fifo_02_wr_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.504ns|     0.496ns|       0|           0
+  h0/fifo_13_wr_addr(2)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "mem_interface_top/ddr2_top0/data_pat | MAXDELAY|     2.692ns|     0.308ns|       0|           0
+  h0/fifo_13_wr_addr(3)" MAXDELAY = 3       |         |            |            |        |            
+     ns                                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_cpci_clk = PERIOD TIMEGRP "cpci_clk" 1 | SETUP   |     3.305ns|    12.695ns|       0|           0
+  6 ns HIGH 50%                             | HOLD    |     0.501ns|            |       0|           0
+------------------------------------------------------------------------------------------------------
+  TIMEGRP "CPCI_RDY" OFFSET = OUT 8 ns AFTE | MAXDELAY|     3.350ns|     4.650ns|       0|           0
+  R COMP "cpci_clk"                         |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TIMEGRP "CPCI_DMA_OUT" OFFSET = OUT 8 ns  | MAXDELAY|     3.359ns|     4.641ns|       0|           0
+  AFTER COMP "cpci_clk"                     |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_mem_interface_top_infrastructure_top0_ | SETUP   |     3.687ns|     1.313ns|       0|           0
+  cal_top0_phShftClkDcm = PERIOD         TI | HOLD    |     0.843ns|            |       0|           0
+  MEGRP "mem_interface_top_infrastructure_t |         |            |            |        |            
+  op0_cal_top0_phShftClkDcm"         TS_ddr |         |            |            |        |            
+  _clk_200 PHASE 2.5 ns HIGH 50%            |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TIMEGRP "CPCI_DATA" OFFSET = OUT 10 ns AF | MAXDELAY|     5.370ns|     4.630ns|       0|           0
+  TER COMP "cpci_clk"                       |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  NET "ddr2_rst_dqs_div_out/mem_interface_t | N/A     |         N/A|         N/A|     N/A|         N/A
+  op/ddr2_top0/rst_dqs_div_int"         MAX |         |            |            |        |            
+  DELAY = 0.6 ns                            |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  TS_ddr_clk_200 = PERIOD TIMEGRP "ddr_clk_ | N/A     |         N/A|         N/A|     N/A|         N/A
+  200" 5 ns HIGH 50%                        |         |            |            |        |            
+------------------------------------------------------------------------------------------------------
+  PATH "TS01_path" TIG                      | N/A     |         N/A|         N/A|     N/A|         N/A
+------------------------------------------------------------------------------------------------------
+  PATH "TS02_path" TIG                      | N/A     |         N/A|         N/A|     N/A|         N/A
+------------------------------------------------------------------------------------------------------
+  PATH "TS05_path" TIG                      | SETUP   |         N/A|     1.990ns|     N/A|           0
+------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for TS_ddr_clk_200
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_ddr_clk_200                 |      5.000ns|          N/A|      4.982ns|            0|            0|            0|        26852|
+| TS_mem_interface_top_infrastru|      5.000ns|      4.982ns|          N/A|            0|            0|        24455|            0|
+| cture_top0_clk_dcm0_clk0dcm   |             |             |             |             |             |             |             |
+| TS_mem_interface_top_infrastru|      5.000ns|      4.972ns|          N/A|            0|            0|         2393|            0|
+| cture_top0_clk_dcm0_clk90dcm  |             |             |             |             |             |             |             |
+| TS_mem_interface_top_infrastru|      5.000ns|      1.313ns|          N/A|            0|            0|            4|            0|
+| cture_top0_cal_top0_phShftClkD|             |             |             |             |             |             |             |
+| cm                            |             |             |             |             |             |             |             |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+INFO:Timing:2761 - N/A entries in the Constraints list may indicate that the 
+   constraint does not cover any paths or that it has no requested value.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+INFO:ParHelpers:197 - Number of "Exact" mode Directed Routing Constraints: 6
+INFO:ParHelpers:199 - All "EXACT" mode Directed Routing constrained nets successfully routed. The number of constraints
+   found: 6, number successful: 6
+Total REAL time to PAR completion: 8 mins 3 secs 
+Total CPU time to PAR completion: 8 mins 2 secs 
+
+Peak Memory Usage:  1698 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 2
+Number of info messages: 6
+
+Writing design to file nf2_top_par.ncd
+
+
+
+PAR done!

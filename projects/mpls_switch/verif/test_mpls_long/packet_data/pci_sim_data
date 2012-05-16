@@ -1,0 +1,210 @@
+// File packet_data/pci_sim_data created Sun Dec  4 12:41:35 2011
+//
+// This is a data file intended to be read in by a Verilog simulation.
+// It describes the PCI accesses that are supposed to occur during a test
+//
+//
+// WRITE:  Time: 3900 ns  ADDR: 0x8  DATA: 0x0 
+00000002 // WRITE
+00000000 // Time MSB
+00000F3C // Time LSB (3900 ns) (3 us)
+00000008 // Address (0x8)
+00000000 // Data (0)
+00000000 // Mask (0)
+// WRITE:  Time: 4160 ns  ADDR: 0x40  DATA: 0x0 
+00000002 // WRITE
+00000000 // Time MSB
+00001040 // Time LSB (4160 ns) (4 us)
+00000040 // Address (0x40)
+00000000 // Data (0)
+00000000 // Mask (0)
+// WRITE:  Time: 4420 ns  ADDR: 0x100010c  DATA: 0xf00000d4 
+00000002 // WRITE
+00000000 // Time MSB
+00001144 // Time LSB (4420 ns) (4 us)
+0100010C // Address (0x100010c)
+F00000D4 // Data (4026532052)
+00000000 // Mask (0)
+// WRITE:  Time: 4680 ns  ADDR: 0x1000108  DATA: 0x80c0000 
+00000002 // WRITE
+00000000 // Time MSB
+00001248 // Time LSB (4680 ns) (4 us)
+01000108 // Address (0x1000108)
+080C0000 // Data (135004160)
+00000000 // Mask (0)
+// WRITE:  Time: 4940 ns  ADDR: 0x1000004  DATA: 0x20 
+00000002 // WRITE
+00000000 // Time MSB
+0000134C // Time LSB (4940 ns) (4 us)
+01000004 // Address (0x1000004)
+00000020 // Data (32)
+00000000 // Mask (0)
+// WRITE:  Time: 5200 ns  ADDR: 0x1000100  DATA: 0xffffffff 
+00000002 // WRITE
+00000000 // Time MSB
+00001450 // Time LSB (5200 ns) (5 us)
+01000100 // Address (0x1000100)
+FFFFFFFF // Data (4294967295)
+00000000 // Mask (0)
+// WRITE:  Time: 5460 ns  ADDR: 0x2000148  DATA: 0x2aaab 
+00000002 // WRITE
+00000000 // Time MSB
+00001554 // Time LSB (5460 ns) (5 us)
+02000148 // Address (0x2000148)
+0002AAAB // Data (174763)
+00000000 // Mask (0)
+// WRITE:  Time: 5720 ns  ADDR: 0x200014c  DATA: 0x55555 
+00000002 // WRITE
+00000000 // Time MSB
+00001658 // Time LSB (5720 ns) (5 us)
+0200014C // Address (0x200014c)
+00055555 // Data (349525)
+00000000 // Mask (0)
+// WRITE:  Time: 5980 ns  ADDR: 0x12aabbc  DATA: 0x0 
+00000002 // WRITE
+00000000 // Time MSB
+0000175C // Time LSB (5980 ns) (5 us)
+012AABBC // Address (0x12aabbc)
+00000000 // Data (0)
+00000000 // Mask (0)
+// WRITE:  Time: 6240 ns  ADDR: 0x12aabb8  DATA: 0x0 
+00000002 // WRITE
+00000000 // Time MSB
+00001860 // Time LSB (6240 ns) (6 us)
+012AABB8 // Address (0x12aabb8)
+00000000 // Data (0)
+00000000 // Mask (0)
+// WRITE:  Time: 6500 ns  ADDR: 0x12aabb4  DATA: 0x0 
+00000002 // WRITE
+00000000 // Time MSB
+00001964 // Time LSB (6500 ns) (6 us)
+012AABB4 // Address (0x12aabb4)
+00000000 // Data (0)
+00000000 // Mask (0)
+// WRITE:  Time: 6760 ns  ADDR: 0x12aabb0  DATA: 0xffffffff 
+00000002 // WRITE
+00000000 // Time MSB
+00001A68 // Time LSB (6760 ns) (6 us)
+012AABB0 // Address (0x12aabb0)
+FFFFFFFF // Data (4294967295)
+00000000 // Mask (0)
+// WRITE:  Time: 7020 ns  ADDR: 0x155565c  DATA: 0x0 
+00000002 // WRITE
+00000000 // Time MSB
+00001B6C // Time LSB (7020 ns) (7 us)
+0155565C // Address (0x155565c)
+00000000 // Data (0)
+00000000 // Mask (0)
+// WRITE:  Time: 7280 ns  ADDR: 0x1555658  DATA: 0x0 
+00000002 // WRITE
+00000000 // Time MSB
+00001C70 // Time LSB (7280 ns) (7 us)
+01555658 // Address (0x1555658)
+00000000 // Data (0)
+00000000 // Mask (0)
+// WRITE:  Time: 7540 ns  ADDR: 0x1555654  DATA: 0x0 
+00000002 // WRITE
+00000000 // Time MSB
+00001D74 // Time LSB (7540 ns) (7 us)
+01555654 // Address (0x1555654)
+00000000 // Data (0)
+00000000 // Mask (0)
+// WRITE:  Time: 7800 ns  ADDR: 0x1555650  DATA: 0xffffffff 
+00000002 // WRITE
+00000000 // Time MSB
+00001E78 // Time LSB (7800 ns) (7 us)
+01555650 // Address (0x1555650)
+FFFFFFFF // Data (4294967295)
+00000000 // Mask (0)
+// WRITE:  Time: 8060 ns  ADDR: 0x2000100  DATA: 0x4e 
+00000002 // WRITE
+00000000 // Time MSB
+00001F7C // Time LSB (8060 ns) (8 us)
+02000100 // Address (0x2000100)
+0000004E // Data (78)
+00000000 // Mask (0)
+// WRITE:  Time: 8320 ns  ADDR: 0x2000104  DATA: 0x46324300 
+00000002 // WRITE
+00000000 // Time MSB
+00002080 // Time LSB (8320 ns) (8 us)
+02000104 // Address (0x2000104)
+46324300 // Data (1177699072)
+00000000 // Mask (0)
+// WRITE:  Time: 8580 ns  ADDR: 0x2000150  DATA: 0x0 
+00000002 // WRITE
+00000000 // Time MSB
+00002184 // Time LSB (8580 ns) (8 us)
+02000150 // Address (0x2000150)
+00000000 // Data (0)
+00000000 // Mask (0)
+// WRITE:  Time: 8840 ns  ADDR: 0x2000120  DATA: 0x0 
+00000002 // WRITE
+00000000 // Time MSB
+00002288 // Time LSB (8840 ns) (8 us)
+02000120 // Address (0x2000120)
+00000000 // Data (0)
+00000000 // Mask (0)
+// WRITE:  Time: 9100 ns  ADDR: 0x2000124  DATA: 0x2aaaa 
+00000002 // WRITE
+00000000 // Time MSB
+0000238C // Time LSB (9100 ns) (9 us)
+02000124 // Address (0x2000124)
+0002AAAA // Data (174762)
+00000000 // Mask (0)
+// WRITE:  Time: 9360 ns  ADDR: 0x2000140  DATA: 0x0 
+00000002 // WRITE
+00000000 // Time MSB
+00002490 // Time LSB (9360 ns) (9 us)
+02000140 // Address (0x2000140)
+00000000 // Data (0)
+00000000 // Mask (0)
+// WRITE:  Time: 9620 ns  ADDR: 0x2000144  DATA: 0x2aaaa 
+00000002 // WRITE
+00000000 // Time MSB
+00002594 // Time LSB (9620 ns) (9 us)
+02000144 // Address (0x2000144)
+0002AAAA // Data (174762)
+00000000 // Mask (0)
+// WRITE:  Time: 9880 ns  ADDR: 0x200203c  DATA: 0x9876abcd 
+00000002 // WRITE
+00000000 // Time MSB
+00002698 // Time LSB (9880 ns) (9 us)
+0200203C // Address (0x200203c)
+9876ABCD // Data (2557914061)
+00000000 // Mask (0)
+// WRITE:  Time: 10140 ns  ADDR: 0x2002038  DATA: 0x3456ab12 
+00000002 // WRITE
+00000000 // Time MSB
+0000279C // Time LSB (10140 ns) (10 us)
+02002038 // Address (0x2002038)
+3456AB12 // Data (878095122)
+00000000 // Mask (0)
+// WRITE:  Time: 10400 ns  ADDR: 0x2002034  DATA: 0x34ce 
+00000002 // WRITE
+00000000 // Time MSB
+000028A0 // Time LSB (10400 ns) (10 us)
+02002034 // Address (0x2002034)
+000034CE // Data (13518)
+00000000 // Mask (0)
+// WRITE:  Time: 10660 ns  ADDR: 0x2002030  DATA: 0xffffffff 
+00000002 // WRITE
+00000000 // Time MSB
+000029A4 // Time LSB (10660 ns) (10 us)
+02002030 // Address (0x2002030)
+FFFFFFFF // Data (4294967295)
+00000000 // Mask (0)
+// READ:  Time: 10920 ns  ADDR: 0x155565c  EXP_DATA: 0x0  MASK: 0xffffffff
+00000001 // READ
+00000000 // Time MSB
+00002AA8 // Time LSB (10920 ns) (10 us)
+0155565C // Address (0x155565c)
+00000000 // Data (0)
+FFFFFFFF // Mask (4294967295)
+// READ:  Time: 11180 ns  ADDR: 0x1555658  EXP_DATA: 0x0  MASK: 0xffffffff
+00000001 // READ
+00000000 // Time MSB
+00002BAC // Time LSB (11180 ns) (11 us)
+01555658 // Address (0x1555658)
+00000000 // Data (0)
+FFFFFFFF // Mask (4294967295)
+// End of file.
